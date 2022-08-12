@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Poppins:wght@500&display=swap');
+
+:root{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+h2{
+  margin: 0;
+}

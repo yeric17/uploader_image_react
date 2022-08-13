@@ -1,0 +1,41 @@
+.loader{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #4F4F4F;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px 1px rgba(0,0,0,.2);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+.loader_bar{
+    display: block;
+    height: 6px;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+.loader_bar::after{
+    content: "";
+    height: 100%;
+    width: 33.3%;
+    display: block;
+    position: absolute;
+    background-color: #2F80ED;
+    border-radius: inherit;
+    transform: translateX(0%);
+    animation: loading 1s linear infinite;
+    animation-timing-function: ease-out;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(300%);
+    }
+}

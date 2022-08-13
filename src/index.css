@@ -4,6 +4,36 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
+*{
+  box-sizing: border-box;
+}
 h2{
   margin: 0;
+}
+
+.btn{
+  font-family: 'Noto Sans', sans-serif;
+  flex-grow: 0;
+  border: none;
+  width: 100px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: #2F80ED;
+  color: white;
+}
+
+.btn.success {
+  background-color: #27AE60;
+  color: white;
+}
+
+.btn:hover{
+  opacity: .9;
+}
+.btn:active{
+  opacity: .8;
 }

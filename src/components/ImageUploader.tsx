@@ -10,6 +10,7 @@ interface uploaderState  {
     link: string
 }
 
+const API_HOST = import.meta.env.VITE_PUBLIC_API_HOST
 
 const typesSupported = ['image/png','image/jpeg']
 
@@ -33,7 +34,7 @@ export const ImageUploader = () => {
         setDragState({...useDragState,state:'uploading'})
         const formData = new FormData(refForm.current)
 
-        const response = await fetch("http://localhost:4000/upload",{
+        const response = await fetch(`${API_HOST}/upload`,{
             method: 'POST',
             body: formData
         })

@@ -48,8 +48,6 @@ export const ImageUploader = () => {
             }
         } catch(err) {
             setDragState({...useDragState,state:'error'})
-        } finally {
-            setDragState({...useDragState,state:'none'})
         }
     }
     

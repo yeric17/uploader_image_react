@@ -34,18 +34,23 @@ export const ImageUploader = () => {
         setDragState({...useDragState,state:'uploading'})
         const formData = new FormData(refForm.current)
 
-        const response = await fetch(`${API_HOST}/upload`,{
-            method: 'POST',
-            body: formData
-        })
-        
-        if(response.ok){
-            const json = await response.json()
-            console.log(json)
-            setDragState({state:'success', link: json.image.url})
-            return;
+        try {
+            const response = await fetch(`${API_HOST}/upload`,{
+                method: 'POST',
+                body: formData
+            })
+            
+            if(response.ok){
+                const json = await response.json()
+                console.log(json)
+                setDragState({state:'success', link: json.image.url})
+                return;
+            }
+        } catch(err) {
+            setDragState({...useDragState,state:'error'})
+        } finally {
+            setDragState({...useDragState,state:'none'})
         }
-        setDragState({...useDragState,state:'error'})
     }
     
     const handleChoseFile = (event:React.MouseEvent<HTMLButtonElement>) => {

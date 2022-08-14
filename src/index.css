@@ -6,6 +6,8 @@
 }
 *{
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 h2{
   margin: 0;
@@ -36,4 +38,12 @@ h2{
 }
 .btn:active{
   opacity: .8;
+}
+
+.App{
+  background-color: rgb(215, 217, 223);
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
 }

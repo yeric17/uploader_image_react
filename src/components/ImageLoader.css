@@ -1,5 +1,5 @@
 .loader{
-    max-width: 300px;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     color: #4F4F4F;
@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: .8rem;
+    background-color: white;
 }
 .loader_bar{
     display: block;

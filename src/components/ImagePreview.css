@@ -5,13 +5,14 @@
     align-items: center;
     gap: 2rem;
     width: 100%;
-    width: 400px;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     color: #4F4F4F;
     border-radius: 12px;
     box-shadow: 0 1px 4px 1px rgba(0,0,0,.2);
     padding: 32px;
+    background-color: white;
 }
 
 .uploader_preview_content{
@@ -32,19 +33,22 @@
     border-radius: 12px;
 }
 .uploader_preview_link{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 2rem;
     border: 1px solid #E0E0E0;
     background-color: #F6F8FB;
     border-radius: 8px;
     padding: 1px;
 }
 .uploader_preview_link span {
+    width: 100%;
+    display: block;
     max-width: 200px;
-    font-size: 8px;
+    font-size: 9px;
     overflow-x: hidden;
     text-overflow: ellipsis;
     padding-left: .5rem;
